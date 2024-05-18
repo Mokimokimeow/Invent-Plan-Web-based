@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: url(../img/1.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+.wrapper {
+    padding: 0 20px 0 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.row {
+    width: 900px;
+    height: 550px;
+    border-radius: 10px;
+    background: whitesmoke;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+.side-img img{
+    margin-top: 70px;
+}
+.side-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.img {
+    width: 35px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.input-box {
+    width: 330px;
+    box-sizing: border-box;
+}
+.input-box header {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 45px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+
+.input {
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    outline: none;
+    margin-bottom: 20px;
+}
+.input-box .input-field label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-field .input:focus ~ label {
+    top: -10px;
+    font-size: 15px;
+    font-weight: 40px;
+}
+.input-field .input:valid ~ label {
+    top: -10px;
+    font-size: 15px;
+    font-weight: 40px;
+    color: black;
+}
+.input-field .input:focus, .input-field .input:valid ~ label {
+    border-bottom: 1px solid #ffc0cb;
+}
+.submit {
+    height: 45px;
+}
+.submit:hover {
+    opacity: 0.5;
+}
+.submit:active {
+    background-color: #FFC0CB;
+}
+@media only screen and (max-width: 768px) {
+    .side-img {
+        border-radius: 10px 10px 0 0;
+    }
+    img{
+        width: 200px;
+        position: absolute;
+        top: 1px;
+        left: 25%;
+    }
+    .row {
+        max-width: 420px;
+        width: 100%;
+    }
+}
